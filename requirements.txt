@@ -1,0 +1,7 @@
+gradio
+pandas
+plotly
+tabulate
+langchain
+langchain-community
+google-generativeai

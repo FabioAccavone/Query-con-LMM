@@ -1,0 +1,10 @@
+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   chiave 1
+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   chiave 2
+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   chiave 3
+ # Estrai la parte della risposta prima di "Question" e la query SQL
+    result = risultato['result']
+        
+        # Rimuoviamo tutto dalla parte "Question" in poi
+    result_cleaned = result.split('Question:')[0].strip()
+
+    Gemini Key : AIzaSyAt6h3SfV659TXo4qureoeUmuWZgnXl6Bg

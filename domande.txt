@@ -1,0 +1,149 @@
+🟢 Livello Base
+Domande dirette, semplici aggregazioni o filtri.
+
+Qual è la mia media di passi giornalieri negli ultimi 7 giorni?
+
+Qual è stato il mio peso massimo registrato nell’ultimo mese?
+
+Qual è il livello medio di stress oggi?
+
+Quante ore di sonno ho avuto la notte scorsa?
+
+In quale giorno ho registrato il maggior numero di piani saliti questa settimana?
+
+Quanto è stata la mia frequenza cardiaca a riposo ieri?
+
+Qual è la durata media del sonno REM negli ultimi 7 giorni?
+
+Quanti litri d’acqua ho bevuto in media negli ultimi 3 giorni?
+
+Qual è stato il valore minimo di SpO2 negli ultimi 5 giorni?
+
+Qual è il mio battito massimo registrato oggi?
+
+Qual è stato il giorno con il tempo REM più lungo questa settimana?
+
+Qual è il valore medio della saturazione SpO2 negli ultimi 5 giorni?
+
+In quale giorno ho consumato più calorie totali nell’ultima settimana?
+
+Qual è stato il valore massimo di battito a riposo registrato questo mese?
+
+Quante volte ho registrato un punteggio di sonno "Fair"?
+
+
+🟡 Livello Intermedio
+Richiedono join, aggregazioni con condizioni, o uso di più tabelle.
+
+Quali sono i 5 giorni con più passi e meno stress?
+
+Nei giorni con più di 8 ore di sonno, quanti passi ho fatto in media?
+
+In quali giorni ho raggiunto l’obiettivo di passi ma non quello di calorie?
+
+Nei giorni in cui ho dormito più di 7 ore, qual è stata la mia frequenza cardiaca media?
+
+Qual è la differenza media tra calorie consumate e calorie attive negli ultimi 14 giorni?
+
+Qual è stata la qualità del sonno (score) nei giorni con stress medio superiore a 50?
+
+In quale giorno ho avuto la più alta intensità combinata di attività moderata e vigorosa?
+
+Qual è la correlazione tra il livello di stress medio giornaliero e la qualità del sonno?
+
+Quali giorni ho avuto più di 10.000 passi e una frequenza cardiaca a riposo sotto i 60 bpm?
+
+Qual è stato il mio tempo medio di attività fisica nelle ultime 2 settimane?
+
+In quali giorni ho superato il mio obiettivo di idratazione?
+
+Elenca i giorni in cui ho avuto valori anomali di SpO2 (es. sotto 90%).
+
+🔴 Livello Avanzato
+Correlazioni, subquery, finestre temporali dinamiche, metodi statistici.
+
+Calcola la correlazione tra stress giornaliero e durata del sonno negli ultimi 30 giorni.
+
+Quali giorni mostrano un miglioramento costante nel punteggio del sonno, mostrami i punteggi ?
+
+Quali sono i giorni in cui ho dormito male nonostante basso livello di stress?
+
+Trova la settimana con il più alto incremento medio di passi rispetto alla settimana precedente.
+
+Quali giorni mostrano variazioni estreme nella frequenza cardiaca a riposo?
+
+Qual è stata la variazione media settimanale del mio peso negli ultimi 3 mesi?
+
+Calcola la deviazione standard dei miei passi giornalieri nell’ultimo mese.
+
+Qual è stata la mia efficienza calorica media (calorie attive / calorie totali)?
+
+In quali giorni ho avuto battito basso ma alto dispendio calorico?
+
+Qual è il mio tempo medio di sonno nelle notti successive a giorni con oltre 12.000 passi?
+
+Quali eventi (es. sonno REM lungo, bassa SpO2) precedono giornate con alto livello di stress?
+
+
+✅ Esempi per testare grafici a linee (chart_type: "line")
+Questi dovrebbero attivare un grafico temporale con x = data e y = metrica:
+
+🟩 garmin_summary
+
+"Mostrami l'andamento dei passi giornalieri nell'ultima settimana"
+
+🟦 garmin
+
+"Visualizza l'andamento del battito cardiaco a riposo negli ultimi 10 giorni"
+
+🟨 garmin_monitoring
+
+"Traccia la frequenza cardiaca minuto per minuto per il giorno 2024-05-03"
+
+📊 Esempi per testare grafici a barre (chart_type: "bar")
+Utile per distribuzioni o confronti categorici:
+
+🟩 garmin_summary
+
+"Confronta le calorie totali bruciate per ogni giorno della scorsa settimana"
+
+🟦 garmin
+
+"Visualizza i piani saliti ogni giorno nel mese di maggio 2024"
+
+🟨 garmin_monitoring
+
+"Mostra i minuti di attività intensa per ogni ora del 2 giugno 2024"
+
+✴️ Esempi per testare grafici scatter (chart_type: "scatter")
+Per correlazioni tra due metriche numeriche:
+
+🟩 garmin_summary
+
+"Esiste una correlazione tra i passi e le calorie attive giornaliere?"
+
+🟦 garmin
+
+"Metti a confronto i valori di stress e frequenza cardiaca a riposo per le ultime due settimane"
+
+🟨 garmin_monitoring
+
+"Mostra un grafico che mette in relazione la respirazione e la saturazione di ossigeno"
+
+📋 Esempi per forzare tabella dati (chart_type: "table")
+Utile per testare la visualizzazione dei risultati puramente tabellari:
+
+"Elenca le ore di sonno e i punteggi del sonno per ogni notte dell'ultima settimana"
+
+"Mostra peso e grasso corporeo registrati ogni 3 giorni"
+
+"Fammi vedere le letture dell'ossigenazione del sangue per il 1° maggio 2024"
+
+⚠️ Esempi per testare errori o assenza di dati
+Questi ti servono per validare la gestione errori e risposte vuote:
+
+"Visualizza i passi registrati nel 1990"
+(→ Nessun dato, dovrebbe dire qualcosa come "nessun risultato")
+
+"Quanti goal ha fatto Messi nel database Garmin?"
+(→ Prompt off-topic, test per Gemini)
